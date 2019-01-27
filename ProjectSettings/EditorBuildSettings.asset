@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Reroll.unity
     guid: b2f570b4b83330c41a08f2fd318e12d6
   - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 89f6173154b6f9345b44caa9edb38118
+  - enabled: 1
     path: Assets/Scenes/ShowingHouse.unity
-    guid: 3bff3e84b4e00fe4cac48c2784628e02
-  - enabled: 1
-    path: Assets/Scenes/ShowingMess.unity
-    guid: c4d026ae3baf9e3439afed36f4c34590
-  - enabled: 1
-    path: Assets/Scenes/ShowingOffice.unity
-    guid: 1957833bb15880d4482a09d6c57dc2ea
+    guid: 952c1fcf0874dde40a3e7a2f67b13779
   m_configObjects: {}
