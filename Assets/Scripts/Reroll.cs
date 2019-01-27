@@ -29,26 +29,26 @@ public class Reroll : MonoBehaviour
         HomeThings.MyThings = new List<HomeThing>();
         var thingH = randomHomeThing(Letter.H);
         titleH.text = highlightFirstLetter(thingH.Title) + ",";
-        modifierH.text = thingH.Modifying.ToString();
+        modifierH.text = thingH.Tooltip;
         HomeThings.MyThings.Add(thingH);
 
         var thingO = randomHomeThing(Letter.O);
         titleO.text = highlightFirstLetter(thingO.Title) + ",";
-        modifierO.text = thingO.Modifying.ToString();
+        modifierO.text = thingO.Tooltip;
         HomeThings.MyThings.Add(thingO);
 
         HomeThing thingM;
-        do // make sure there are not multiple scene things
+        do // make sure there are not multiple scene things; both office and mess can't happen at the same time
         {
             thingM = randomHomeThing(Letter.M);
-        } while (thingO.Modifying == WhatItModifies.SceneType && thingM.Modifying == WhatItModifies.SceneType);
+        } while (thingO.WhatItIs == WhatItIs.Office && thingM.WhatItIs == WhatItIs.Mess);
         titleM.text = highlightFirstLetter(thingM.Title) + ", and";
-        modifierM.text = thingM.Modifying.ToString();
+        modifierM.text = thingM.Tooltip;
         HomeThings.MyThings.Add(thingM);
 
         var thingE = randomHomeThing(Letter.E);
         titleE.text = highlightFirstLetter(thingE.Title) + " are.";
-        modifierE.text = thingE.Modifying.ToString();
+        modifierE.text = thingE.Tooltip;
         HomeThings.MyThings.Add(thingE);
     }
 

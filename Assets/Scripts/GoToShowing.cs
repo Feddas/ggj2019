@@ -23,7 +23,9 @@ public class GoToShowing : MonoBehaviour
 
     public void GoToScene()
     {
-        var scene = HomeThings.MyThings.Where(mt => mt.Modifying == WhatItModifies.SceneType).FirstOrDefault();
+        var scene = HomeThings.MyThings
+            .Where(mt => mt.WhatItIs == WhatItIs.Office || mt.WhatItIs == WhatItIs.Mess)
+            .FirstOrDefault();
 
         if (scene == null)
         {

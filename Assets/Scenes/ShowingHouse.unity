@@ -16823,11 +16823,11 @@ MonoBehaviour:
   maxJumpHeight: 4
   minJumpHeight: 1
   timeToJumpApex: 0.4
-  wallJumpClimb: {x: 7.5, y: 16}
+  wallJumpClimb: {x: 0, y: 0}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
-  canDoubleJump: 1
-  wallSlideSpeedMax: 3
+  canDoubleJump: 0
+  wallSlideSpeedMax: 10
   wallStickTime: 0.25
 --- !u!114 &1917403130
 MonoBehaviour:
@@ -18235,6 +18235,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2056530328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056530329}
+  - component: {fileID: 2056530330}
+  m_Layer: 0
+  m_Name: ApplyThings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2056530329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056530328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2056530330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056530328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5182e85929ad6408641569a1057ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 1917403129}
 --- !u!1001 &2065826175
 PrefabInstance:
   m_ObjectHideFlags: 0
