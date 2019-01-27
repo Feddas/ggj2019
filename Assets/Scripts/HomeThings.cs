@@ -61,18 +61,18 @@ public static class HomeThings
         //new HomeThing("Mucus", Letter.M, WhatItModifies.WorldPhysics),
         //new HomeThing("Elastic", Letter.E, WhatItModifies.PlayerAbilities),
         //new HomeThing("Elephants", Letter.E, WhatItModifies.MonsterTypes),
-        new HomeThing("Honey buns", Letter.H, WhatItIs.Honey, "must collect +4 coins"),
+        new HomeThing("Honey buns", Letter.H, WhatItIs.Honey, "TODO must collect +4 coins"),
         new HomeThing("Heart", Letter.H, WhatItIs.Heart, "wall jump"),                  // DONE
 //        new HomeThing("Office", Letter.O, WhatItModifies.SceneType, "office landscape", 1),
         new HomeThing("Obstacles", Letter.O, WhatItIs.Obstacles, "wall slide"),         // DONE
         new HomeThing("Orange tabby cat", Letter.O, WhatItIs.OrangeCat, "double jump"), // DONE
-        new HomeThing("Memories", Letter.M, WhatItIs.Memories, "+10 seconds to beat level"),
+        new HomeThing("Memories", Letter.M, WhatItIs.Memories, "TODO +10 seconds to beat level"),
 //        new HomeThing("Mess", Letter.M, WhatItModifies.SceneType, "messy landscape", 2),
-        new HomeThing("Mortgage", Letter.M, WhatItIs.Mortgate, "must collect +10 coins"),
-        new HomeThing("Money goes", Letter.M, WhatItIs.Money, "must collect -2 coins"),
-        new HomeThing("Eating", Letter.E, WhatItIs.Eating, "find food to add time"),
-        new HomeThing("Electric bills", Letter.E, WhatItIs.ElectricBills, "must collect +2 coins"),
-        new HomeThing("End of the day", Letter.E, WhatItIs.EndOfTheDay, "-20 seconds to beat level"),
+        new HomeThing("Mortgage", Letter.M, WhatItIs.Mortgate, "TODO must collect +10 coins"),
+        new HomeThing("Money goes", Letter.M, WhatItIs.Money, "TODO must collect -2 coins"),
+        new HomeThing("Eating", Letter.E, WhatItIs.Eating, "TODO find food to add time"),
+        new HomeThing("Electric bills", Letter.E, WhatItIs.ElectricBills, "TODO must collect +2 coins"),
+        new HomeThing("End of the day", Letter.E, WhatItIs.EndOfTheDay, "TODO -20 seconds to beat level"),
     };
 }
 // Default home scene                    A scene 40 seconds

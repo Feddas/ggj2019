@@ -7,6 +7,7 @@ public class SetWinSentance : MonoBehaviour
 {
     public UnityEngine.UI.Text sentance;
     public string sentancePrefix = "Enjoy your ";
+    public string sentanceSuffix = ".";
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class SetWinSentance : MonoBehaviour
         string concatedTitles = string.Join(", ", titles);
         concatedTitles = concatedTitles.Replace(", " + titles.Last(), ", and " + titles.Last());
         concatedTitles = concatedTitles.ToLower();
-        sentance.text = sentancePrefix + concatedTitles + ".";
+        sentance.text = sentancePrefix + concatedTitles + sentanceSuffix;
     }
 
     void Update()
