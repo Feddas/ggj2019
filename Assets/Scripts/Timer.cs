@@ -57,6 +57,7 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (timeRemaining.TotalSeconds <= 1)
             {
+                HomeThings.CoinsGathered = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
             else if (HomeThings.MyThings != null)
