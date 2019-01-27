@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // crossStitch https://i.pinimg.com/originals/d5/36/bc/d536bcf63ebccfbac3a342c51594781f.jpg
-// red 552116 blue 0000a4
+// red #932a14 blue 0000a4
 public enum Letter
 {
     None,

@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 285339289}
   - component: {fileID: 285339288}
   - component: {fileID: 285339287}
+  - component: {fileID: 285339290}
   - component: {fileID: 285339286}
   m_Layer: 5
   m_Name: Play
@@ -612,6 +613,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285339284}
   m_CullTransparentMesh: 0
+--- !u!114 &285339290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285339284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17556fe5e9d514438e500ce734a1d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 103
+  action: 1
+  onKey:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 285339286}
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &494190346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,6 +989,7 @@ GameObject:
   - component: {fileID: 741612213}
   - component: {fileID: 741612212}
   - component: {fileID: 741612211}
+  - component: {fileID: 741612215}
   - component: {fileID: 741612214}
   m_Layer: 5
   m_Name: Reroll
@@ -1096,6 +1128,36 @@ MonoBehaviour:
   modifierO: {fileID: 494190348}
   modifierM: {fileID: 124386653}
   modifierE: {fileID: 1931286140}
+--- !u!114 &741612215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741612209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17556fe5e9d514438e500ce734a1d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 114
+  action: 1
+  onKey:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 741612214}
+        m_MethodName: DoReroll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1270326693
 GameObject:
   m_ObjectHideFlags: 0
