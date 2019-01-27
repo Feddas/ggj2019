@@ -140,6 +140,19 @@ public class HelpDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#else
+  /// <summary> copy of UnityEditor.MessageType </summary>
+    public enum MessageType
+    {
+        // Summary: Neutral message.
+        None = 0,
+        // Summary: Info message.
+        Info = 1,
+        // Summary: Warning message.
+        Warning = 2,
+        // Summary:  Error message.
+        Error = 3
+    }
 #endif
 
 [AttributeUsage(AttributeTargets.Field, Inherited = true)]

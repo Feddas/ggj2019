@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine.Events;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 /// <summary>
 /// Maps sounds to what items are required to make each of sound
@@ -11,14 +14,14 @@ using UnityEngine.Events;
 [Serializable]
 public class InventoryRequired
 {
-    [Help("0 to n items required to be in the colliding object for this event to trigger.", UnityEditor.MessageType.None)]
+    [Help("0 to n items required to be in the colliding object for this event to trigger.", MessageType.None)]
     public List<CollectableItems> FlagsRequiredToPlay;
     public UnityEvent ActionOnMatch;
 }
 
 public class InventoryEvent : MonoBehaviour
 {
-    [Help("This component executes events based on Inventory items that collide with this GameObject.\nEvery scene should have a single GameObject with an InventoryAction component that InventoryEvents can use to preform their actions", UnityEditor.MessageType.None)]
+    [Help("This component executes events based on Inventory items that collide with this GameObject.\nEvery scene should have a single GameObject with an InventoryAction component that InventoryEvents can use to preform their actions", MessageType.None)]
     [Tooltip("Routes PlayAudio. Allows InventoryAction UnityEvent handlers to be stored in a prefab")]
     public InventoryAction ActionManager;
     public List<InventoryRequired> EventByInventoryMatch;
