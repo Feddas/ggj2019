@@ -27,6 +27,10 @@ public class GoToShowing : MonoBehaviour
             .Where(mt => mt.WhatItIs == WhatItIs.Office || mt.WhatItIs == WhatItIs.Mess)
             .FirstOrDefault();
 
+        // reset coin counts
+        HomeThings.CoinsGathered = 0;
+        HomeThings.CoinsNeeded = 1;
+
         if (scene == null)
         {
             SceneManager.LoadScene("ShowingHouse");

@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
 {
     public int SecondsToBeatLevel = 60;
     public Text textTimer;
+    public Text textCoins;
     public Image NightFade;
 
     public float startTime;
@@ -52,14 +53,18 @@ public class Timer : MonoBehaviour
             int timePlaying = (int)(Time.time - startTime);
             System.TimeSpan timeRemaining = new System.TimeSpan(0, 0, SecondsToBeatLevel - timePlaying);
             textTimer.text = timeRemaining.ToString();
+            textCoins.text = HomeThings.CoinsGathered + " / " + HomeThings.CoinsNeeded;
             yield return new WaitForSeconds(1);
             if (timeRemaining.TotalSeconds <= 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
-            else if (HomeThings.MyThings != null && HomeThings.MyThings.Any(mt => mt.WhatItIs == WhatItIs.EndOfTheDay))
+            else if (HomeThings.MyThings != null)
             {
-                setFadeAlpha(1 - (float)(timeRemaining.TotalSeconds / SecondsToBeatLevel));
+                if (HomeThings.MyThings.Any(mt => mt.WhatItIs == WhatItIs.EndOfTheDay))
+                {
+                    setFadeAlpha(1 - (float)(timeRemaining.TotalSeconds / SecondsToBeatLevel));
+                }
             }
         }
     }

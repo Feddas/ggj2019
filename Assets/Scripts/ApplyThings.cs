@@ -13,6 +13,7 @@ public class ApplyThings : MonoBehaviour
     {
         if (HomeThings.MyThings == null)
         {
+            HomeThings.CoinsNeeded = -1 * ExitInv.DictMyInventory[CollectableItems.Coin];
             return;
         }
 
@@ -30,6 +31,7 @@ public class ApplyThings : MonoBehaviour
         int additionalCoins = coinCountDelta();
         // Debug.Log("delta is " + additionalCoins);
         ExitInv.DictMyInventory[CollectableItems.Coin] -= additionalCoins;
+        HomeThings.CoinsNeeded = -1 * ExitInv.DictMyInventory[CollectableItems.Coin];
         ExitInv.UpdateInspectorInventory();
         for (int i = 0; i < additionalCoins; i++)
         {

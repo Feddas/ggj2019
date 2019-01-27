@@ -50,6 +50,8 @@ public class HomeThing
 
 public static class HomeThings
 {
+    public static int CoinsNeeded;
+    public static int CoinsGathered;
     public static List<HomeThing> MyThings;
     public static List<HomeThing> AllThings = new List<HomeThing>
     {
