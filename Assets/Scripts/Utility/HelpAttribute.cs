@@ -27,20 +27,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 using System;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-
-[AttributeUsage(AttributeTargets.Field, Inherited = true)]
-public class HelpAttribute : PropertyAttribute
-{
-    public readonly string help;
-    public readonly MessageType type;
-
-    public HelpAttribute(string help, MessageType type = MessageType.Info)
-    {
-        this.help = help;
-        this.type = type;
-    }
-}
 
 [CustomPropertyDrawer(typeof(HelpAttribute))]
 public class HelpDrawer : PropertyDrawer
@@ -111,7 +99,7 @@ public class HelpDrawer : PropertyDrawer
         position.height = baseHeight;
 
         var range = rangeAttribute;
-        
+
         if (range != null)
         {
             if (prop.propertyType == SerializedPropertyType.Float)
@@ -150,5 +138,19 @@ public class HelpDrawer : PropertyDrawer
         }
 
         EditorGUI.EndProperty();
+    }
+}
+#endif
+
+[AttributeUsage(AttributeTargets.Field, Inherited = true)]
+public class HelpAttribute : PropertyAttribute
+{
+    public readonly string help;
+    public readonly MessageType type;
+
+    public HelpAttribute(string help, MessageType type = MessageType.Info)
+    {
+        this.help = help;
+        this.type = type;
     }
 }
