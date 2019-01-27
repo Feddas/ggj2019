@@ -91,6 +91,22 @@ public class InventoryEvent : MonoBehaviour
     bool hasInventoryFor(InventoryRequired storyClip, Inventory listenersInventory)
     {
         var inventoryCollidedWith = listenersInventory.DictMyInventory.Keys.ToList();
+
+        // HACK: handle ContainsAll() not handling multiple of the same item type
+        if (storyClip.FlagsRequiredToPlay.Where(f => f == CollectableItems.Coin).Count() > 1)
+        {
+            var inventoryCollidedKeys = listenersInventory.DictMyInventory
+                .Where(i => i.Key == CollectableItems.Coin)
+                .FirstOrDefault().Value;
+            if (storyClip.FlagsRequiredToPlay.Where(f => f == CollectableItems.Coin).Count()
+            > inventoryCollidedKeys)
+            {
+                //Debug.Log("FlagsRequiredToPlay" + storyClip.FlagsRequiredToPlay.Where(f => f == CollectableItems.Coin).Count()
+                //+ " colided" + inventoryCollidedWith.Where(i => i == CollectableItems.Coin).Count());
+                return false;
+            }
+        }
+
         return ContainsAll(inventoryCollidedWith, storyClip.FlagsRequiredToPlay);
     }
 
