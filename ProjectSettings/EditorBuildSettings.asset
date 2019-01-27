@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShowingHouse.unity
     guid: 952c1fcf0874dde40a3e7a2f67b13779
+  - enabled: 1
+    path: Assets/Scenes/ShowingMess.unity
+    guid: ac5a089ea5ed37648a20aca42ce97bf1
+  - enabled: 1
+    path: Assets/Scenes/ShowingOffice.unity
+    guid: b2730598ddb46df4db1f7747e65f350c
   m_configObjects: {}
