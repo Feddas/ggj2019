@@ -68,7 +68,7 @@ public static class HomeThings
         new HomeThing("Office", Letter.O, WhatItIs.Office, "office landscape", 1),
         new HomeThing("Obstacles", Letter.O, WhatItIs.Obstacles, "wall slide"),
         new HomeThing("Orange tabby cat", Letter.O, WhatItIs.OrangeCat, "double jump"),
-        new HomeThing("Memories", Letter.M, WhatItIs.Memories, "+10 seconds to beat level"),
+        new HomeThing("Memories", Letter.M, WhatItIs.Memories, "+20 minutes to beat level"),
         new HomeThing("Mess", Letter.M, WhatItIs.Mess, "messy landscape", 2),
         new HomeThing("Mortgage", Letter.M, WhatItIs.Mortgage, "must collect +4 coins"),
         new HomeThing("Money goes", Letter.M, WhatItIs.Money, "must collect -1 coins"),

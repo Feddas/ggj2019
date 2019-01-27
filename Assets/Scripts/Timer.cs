@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
             }
             if (HomeThings.MyThings.Any(mt => mt.WhatItIs == WhatItIs.Memories))
             {
-                SecondsToBeatLevel += 10;
+                SecondsToBeatLevel += 1200;
             }
         }
 
