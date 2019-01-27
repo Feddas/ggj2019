@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentance: {fileID: 1222037510}
   sentancePrefix: 'Enjoy your '
-  sentanceSuffix: .
+  sentanceSuffix: ' home.'
 --- !u!4 &315294592
 Transform:
   m_ObjectHideFlags: 0
